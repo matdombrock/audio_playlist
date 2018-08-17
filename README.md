@@ -1,5 +1,9 @@
 # audio_playlist
-An HTML5/JS Dynamic Playlist System for Audio
+An JS/HTML5 Dynamic Playlist System for Audio.
+
+This is a total reimplementation of the HTML5 audio ```controls``` interface since the official ```controls``` element is not very easy to work with. 
+
+Right now this serves as a simpler (less generalized) & more steamlined alternative to [Amplitude.js](https://github.com/521dimensions/amplitudejs).
 
 Everything outside of the ```app``` directory serves as a demo implementation. 
 
