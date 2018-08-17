@@ -3,6 +3,10 @@ An HTML5/JS Dynamic Playlist System for Audio
 
 Everything outside of the ```app``` directory serves as a demo implementation. 
 
+[DEMO](https://mzero.space/music/) 
+
+Everything in this demo is included in the repo. Just clone this repo and direct your browser to the ```index.html``` page. No need to run a web server as this is 100% fron-end JS!
+
 ![screenshot](https://github.com/matdombrock/audio_playlist/blob/master/ss.png?raw=true)
 
 Creating a new playlist is easy. Just declare the tracks with JSON:
