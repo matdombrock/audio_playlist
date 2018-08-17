@@ -9,6 +9,14 @@ Everything in this demo is included in the repo. Just clone this repo and direct
 
 ![screenshot](https://github.com/matdombrock/audio_playlist/blob/master/ss.png?raw=true)
 
+## How To Use:
+
+* Clone this repo.
+* Create a new directory in the ```albums``` directory with the name of your new playlist or album. 
+* Inside that directory create both an ```art``` directory and a ```tracks``` directory. This is technically optional as long as you edit the track declarations to reflect your new directory structure.
+* Put your album art in the ```art``` directory and your tracks (songs) in the ```tracks``` directory.
+* Edit the JSON in ```index.html``` or duplicate and rename that file:
+
 Creating a new playlist is easy. Just declare the tracks with JSON:
 ```javascript
 <script>
