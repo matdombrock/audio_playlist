@@ -7,7 +7,7 @@ Right now this serves as a simpler (less generalized) & more steamlined alternat
 
 **Everything outside of the ```app``` directory serves as a demo implementation.**
 
-[DEMO](http://mzero.space/lab/audio_playlist/) 
+[DEMO](http://mzero.space/audio_playlist/#0) (Master branch of this repo running on GitHub pages)
 
 Everything in this demo is included in the repo. Just clone this repo and direct your browser to the ```index.html``` page. No need to run a web server as this is 100% fron-end JS!
 
