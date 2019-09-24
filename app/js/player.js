@@ -1,14 +1,15 @@
+var cached_location_hash = "#";
 function SetPlaying(isplaying){
     if(isplaying == "toggle"){
         isplaying = !playing;//need to flip for correct result
     }
     if(!isplaying){
         $("#player")[0].pause();
-        $("#play").css("background-image","url('app/img/play-button.png')");
+        $("#play").css("background-image","url('../../app/img/play-button.png')");
         playing = false;
     }else{                                                                            
         $("#player")[0].play();
-        $("#play").css("background-image","url('app/img/pause-button.png')");
+        $("#play").css("background-image","url('../../app/img/pause-button.png')");
         playing = true;
     }
 }
@@ -16,12 +17,14 @@ function LoadSong(num,autoplay = true){
     //alert(num);
     //document.location.hash = "";
     // document.location.hash = num;
-    if(history.pushState) {
+    /* if(history.pushState) {
         history.pushState(null, null, "#"+num);
     }
     else {
         location.hash = "#"+num;
     }
+    cached_location_hash = "#"+num; */
+    $('.download-track').text("DOWNLOAD TRACK");
     $("#track-"+current_track).removeClass("highlight-track");
     current_track = num;
     $("#track-"+current_track).addClass("highlight-track");
@@ -37,7 +40,13 @@ function LoadSong(num,autoplay = true){
     $("#track-name").text(tracks[num].name);
     $("#artist-name").text(tracks[num].artist);
     $("#album-name").text(tracks[num].album);
+    $('.download-track').click(function(e) {
+        e.preventDefault();  //stop the browser from following
+        //alert("To Download the file, just right click this button and \"Save As\".");
+        $('.download-track').text("RIGHT CLICK SAVE AS");
+    });
     $(".download-track").attr("href",tracks[num].url);
+    $(".download-track").attr("download",tracks[num].name+".mp3");
     player[0].oncanplay = function() {
         //alert(player[0].duration);
         $("#scrub")[0].max = player[0].duration*tracking_multi;
@@ -81,6 +90,7 @@ function Intit(){
         var current_time = ToMinSec(Math.round($("#scrub").val()/tracking_multi));
         var total_time = ToMinSec(Math.round(player[0].duration));
         $("#time-stamp").text(current_time+"/"+total_time);
+        /* location.hash = cached_location_hash; */
         if(!scrubbing){
             //console.log($("#player")[0].currentTime);
             $("#scrub").val($("#player")[0].currentTime*tracking_multi);

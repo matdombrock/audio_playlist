@@ -1,4 +1,4 @@
-tracks = JSON.parse(tracks);
+//tracks = JSON.parse(tracks);
 var tracking_multi = 100;
 var playing = false;
 var current_track = 0;

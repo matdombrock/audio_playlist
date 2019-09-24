@@ -86,7 +86,7 @@ a{
     color:rgb(85, 170, 250);
 }
 #play{
-    background-image:url("img/play-button.png");
+    background-image:url("../../img/play-button.png");
     background-size:contain;
 }
 .wrap{
@@ -104,6 +104,8 @@ a{
     padding:0.25em;
     padding-left:0.5em;
     display:block;
+    cursor: pointer;
+    user-select: none;
 }
 .track-listing:nth-child(odd){
     background:#c5c5c5;
@@ -195,6 +197,12 @@ border-radius:0.5em;
 audio::-webkit-media-controls-panel{
     background:rgb(78, 78, 78);
     border-radius:0%;
+}
+.album-link{
+    display:inline-block;
+}
+.album-link-title{
+
 }
 /* width */
 ::-webkit-scrollbar {
